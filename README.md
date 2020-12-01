@@ -20,7 +20,7 @@ A communities rendition of Minecraft from scratch in java.
  - World Generation
   - create chunks
     - create a sys to add / remove blocks
-  - use procedual generation to generate chunks
+  - ...
   
  - Implement a networking system ( multiplayer )
-  - how idk???
+   - how idk???
