@@ -18,9 +18,9 @@ A communities rendition of Minecraft from scratch in java.
    - preform Audio output
  
  - World Generation
-  - create chunks
-    - create a sys to add / remove blocks
-  - ...
+   - create chunks
+     - create a sys to add / remove blocks
+   - ...
   
  - Implement a networking system ( multiplayer )
    - how idk???
