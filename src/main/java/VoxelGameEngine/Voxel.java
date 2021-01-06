@@ -26,12 +26,12 @@ public enum Voxel {
         }
 
         public void mesh(Chunk chunk, int x, int y, int z) {
-            if (chunk.getVoxel(x, y + 1, z) == AIR) {  chunk.mesh.add(new VVMesh.Quad(x, y, z, 0, tex_ids[0])); }
-            if (chunk.getVoxel(x - 1, y, z) == AIR) {  chunk.mesh.add(new VVMesh.Quad(x, y, z, 1, tex_ids[1])); }
-            if (chunk.getVoxel(x, y, z - 1) == AIR) {  chunk.mesh.add(new VVMesh.Quad(x, y, z, 2, tex_ids[2])); }
-            if (chunk.getVoxel(x, y - 1, z) == AIR) {  chunk.mesh.add(new VVMesh.Quad(x, y, z, 3, tex_ids[3])); }
-            if (chunk.getVoxel(x, y, z + 1) == AIR) {  chunk.mesh.add(new VVMesh.Quad(x, y, z, 4, tex_ids[4])); }
-            if (chunk.getVoxel(x + 1, y, z) == AIR) {  chunk.mesh.add(new VVMesh.Quad(x, y, z, 5, tex_ids[5])); }
+            if (chunk.getVoxel(x, y + 1, z) == AIR) {  chunk.mesh.add(new VVMesh.Quad(x, y, z, 0, tex_ids[0], 0, 0, 0, 0)); }
+            if (chunk.getVoxel(x - 1, y, z) == AIR) {  chunk.mesh.add(new VVMesh.Quad(x, y, z, 1, tex_ids[1], 0, 0, 0, 0)); }
+            if (chunk.getVoxel(x, y, z - 1) == AIR) {  chunk.mesh.add(new VVMesh.Quad(x, y, z, 2, tex_ids[2], 0, 0, 0, 0)); }
+            if (chunk.getVoxel(x, y - 1, z) == AIR) {  chunk.mesh.add(new VVMesh.Quad(x, y, z, 3, tex_ids[3], 0, 0, 0, 0)); }
+            if (chunk.getVoxel(x, y, z + 1) == AIR) {  chunk.mesh.add(new VVMesh.Quad(x, y, z, 4, tex_ids[4], 0, 0, 0, 0)); }
+            if (chunk.getVoxel(x + 1, y, z) == AIR) {  chunk.mesh.add(new VVMesh.Quad(x, y, z, 5, tex_ids[5], 0, 0, 0, 0)); }
         }
 
         private int[] tex_ids;

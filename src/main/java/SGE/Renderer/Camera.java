@@ -18,7 +18,7 @@ public class Camera {
         aspect = win.getAspectRatio();
 
         zNear = 0.1f;
-        zFar = 100f;
+        zFar = 1000f;
 
         trans = new Transform();
     }
