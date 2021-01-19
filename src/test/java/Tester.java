@@ -1,13 +1,13 @@
+import SGE.User.Assets.Asset;
+import SGE.User.Assets.AssetManager;
 import SGE.Renderer.*;
 import SGE.User.User;
 import SGE.User.Output.Window;
-import VoxelGameEngine.Chunk;
-import VoxelGameEngine.VVMesh;
+import VGE.Vorld;
 import org.joml.Vector2d;
 import org.lwjgl.*;
 
 import static org.lwjgl.glfw.GLFW.*;
-import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL20.GL_FRAGMENT_SHADER;
 import static org.lwjgl.opengl.GL20.GL_VERTEX_SHADER;
 
@@ -18,13 +18,10 @@ public class Tester {
     private User user;
 
     //render
-    private ShaderProgram sprog;
     private Camera cam;
 
     //object
-    private Chunk chunk;
-
-    Texture texture;
+    private Vorld world;
 
     public void run() {
         System.out.println("Hello LWJGL " + Version.getVersion() + "!");
@@ -32,7 +29,6 @@ public class Tester {
         init();
         loop();
 
-        sprog.terminate();
         user.terminate();
 
         // Terminate GLFW and free the error callback
@@ -44,31 +40,35 @@ public class Tester {
 
         try {
             Window win = new Window("Test", 1200, 1200);
-            user = new User(win);
+            AssetManager am = new AssetManager("/home/mason/IdeaProjects/Test/src/main/assets/");
+            user = new User(win, am);
 
-            sprog = new ShaderProgram();
+            user.assetManager.load("Shaders/vertexVV.glsl", new Asset.Shader(GL_VERTEX_SHADER));
+            user.assetManager.load("Shaders/fragmentVV.glsl", new Asset.Shader(GL_FRAGMENT_SHADER));
+            user.assetManager.load("Textures/grassblock.png", new Asset.Texture());
 
-            String assets = "/home/mason/IdeaProjects/Test/src/main/assets/";
-            sprog.add( new Shader(assets + "Shaders/vertexVV.glsl", GL_VERTEX_SHADER) );
-            sprog.add( new Shader(assets + "Shaders/fragmentVV.glsl", GL_FRAGMENT_SHADER) );
+            ShaderProgram sprog = new ShaderProgram();
+
+            Asset.Shader shad = (Asset.Shader) user.assetManager.get("Shaders/vertexVV.glsl");
+            System.out.println(user.assetManager.assets);
+            sprog.add( (Asset.Shader) user.assetManager.get("Shaders/vertexVV.glsl") );
+            sprog.add( (Asset.Shader) user.assetManager.get("Shaders/fragmentVV.glsl") );
 
             sprog.link();
 
             sprog.createUniform("cam_mat");
-           // sprog.createUniform("trans_mat");
-
+            sprog.createUniform("chunk_pos");
             sprog.createUniform("texture_sampler");
 
+            world = new Vorld(sprog, (Asset.Texture)user.assetManager.get("Textures/grassblock.png"));
+
+            world.loadChunk(0, 0, 1);
+            world.loadChunk(1, 0, 1);
+            world.loadChunk(0, 1, 1);
+            world.loadChunk(1, 1, 1);
 
             cam = new Camera(win);
             cam.getTrans().setPosition(0, 0, 0);
-
-            texture = new Texture(assets + "Textures/grassblock.png");
-
-            chunk = new Chunk(texture);
-            System.out.println("s");
-            chunk.createMesh();
-            System.out.println("e");
 
         } catch (Exception e) { e.printStackTrace(); }
 
@@ -99,7 +99,6 @@ public class Tester {
 
                 user.mouse.setPos(600, 600);
 
-
                 if (user.keyboard.getKey(GLFW_KEY_W).down) {
                     float rot = cam.trans.rotation.y - (float)(Math.PI / 2);
                     cam.trans.move((float)(Math.cos(rot) * 10 * delta), 0, (float)(Math.sin(rot) * 10 * delta));
@@ -126,17 +125,19 @@ public class Tester {
                     cam.trans.move(0, -10 * (float)delta, 0);
                 }
 
+                int xp = (int)cam.trans.position.x / 31;
+                int yp = (int)cam.trans.position.y / 31;
+                int zp = (int)cam.trans.position.z / 31;
+
+                int[][] diffs = { {0, 0, 0} };
+
+                for (
+
+                )
+
                 //output
 
-                sprog.bind();
-
-                sprog.setUniform("cam_mat", cam.getCameraMatrix());
-
-                sprog.setUniform("texture_sampler", 0);
-
-                chunk.mesh.render();
-
-                sprog.unbind();
+                world.render(cam);
 
                 user.window.display();
 
@@ -150,5 +151,4 @@ public class Tester {
     }
 
     public static void main(String[] args) { new Tester().run(); }
-
 }
