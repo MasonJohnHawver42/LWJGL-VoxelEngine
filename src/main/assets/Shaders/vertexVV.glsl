@@ -6,6 +6,7 @@ out vec2 texCoord;
 out float color;
 
 uniform mat4 cam_mat;
+uniform ivec3 chunk_pos;
 
 void main() {
 
@@ -34,5 +35,5 @@ void main() {
     vec2 texPos = vec2(mod(tex_id, ss_size.x), floor(tex_id / ss_size.x)) / ss_size;
     texCoord = texPos + (tv_ids[tv_id] / ss_size);
 
-    gl_Position = cam_mat * vec4(x, y, z, 1.0);
+    gl_Position = cam_mat * vec4(vec3(x, y, z) + (chunk_pos * 31), 1.0f);
 }
