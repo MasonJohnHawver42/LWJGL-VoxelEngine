@@ -12,10 +12,12 @@ A communities rendition of Minecraft from scratch in java.
    - [x] textured voxels
    - [x] sprite sheet sys
    - [x] create a camera sys
+   - [ ] skybox
+   - [ ] particle system
  
  - nessacary i/o
    - [x] get multi platformed input and mabey an event sys idk
-   - preform Audio output
+   - [ ] preform Audio output
  
  - World Generation
    - [x] create chunks
@@ -26,8 +28,7 @@ A communities rendition of Minecraft from scratch in java.
        - [ ] rivers
        - [ ] caves
        - [ ] structures
-       
+   - [ ] edit voxels on the fly 
    - ...
   
- - Implement a networking system ( multiplayer )
-   - how idk???
+ - [ ] Implement a networking system ( multiplayer ) <- how dunno?
