@@ -50,8 +50,6 @@ public class Chunk {
             }
         }
 
-        System.out.println("here butt");
-
         mesh.build();
     }
 
