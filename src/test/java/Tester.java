@@ -67,6 +67,11 @@ public class Tester {
             world.loadChunk(0, 1, 1);
             world.loadChunk(1, 1, 1);
 
+            world.loadChunk(0, 0, 0);
+            world.loadChunk(1, 0, 0);
+            world.loadChunk(0, 1, 0);
+            world.loadChunk(1, 1, 0);
+
             cam = new Camera(win);
             cam.getTrans().setPosition(0, 0, 0);
 
@@ -130,10 +135,6 @@ public class Tester {
                 int zp = (int)cam.trans.position.z / 31;
 
                 int[][] diffs = { {0, 0, 0} };
-
-                for (
-
-                )
 
                 //output
 

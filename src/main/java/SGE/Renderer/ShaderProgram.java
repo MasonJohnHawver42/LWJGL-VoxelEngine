@@ -5,7 +5,10 @@ import static org.lwjgl.opengl.GL32.GL_GEOMETRY_SHADER;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import SGE.User.Assets.Asset;
 import org.joml.Matrix4f;
+import org.joml.Vector3i;
 import org.lwjgl.system.MemoryStack;
 
 public class ShaderProgram {
@@ -30,11 +33,15 @@ public class ShaderProgram {
         }
     }
 
+    public void setUniform(String uniformName, int x, int y, int z) {
+        glUniform3i(uniforms.get(uniformName), x, y, z);
+    }
+
     public void setUniform(String uniformName, int value) {
         glUniform1i(uniforms.get(uniformName), value);
     }
 
-    public void add(Shader shader) {
+    public void add(Asset.Shader shader) {
 
         glAttachShader(this.id, shader.id);
 
@@ -69,7 +76,7 @@ public class ShaderProgram {
     public void terminate() { unbind(); if (id != 0) { glDeleteProgram(id); } }
 
 
-    private Shader vertex, geometry, fragment;
+    private Asset.Shader vertex, geometry, fragment;
 
     private final Map<String, Integer> uniforms;
 
