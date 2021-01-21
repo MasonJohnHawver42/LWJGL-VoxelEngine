@@ -19,7 +19,14 @@ A communities rendition of Minecraft from scratch in java.
  
  - World Generation
    - [x] create chunks
-     - create a sys to add / remove blocks
+   - [ ] load chuncks dynamically
+   - [ ] procedualy generate chunks
+       - [ ] landscape
+       - [ ] biomes
+       - [ ] rivers
+       - [ ] caves
+       - [ ] structures
+       
    - ...
   
  - Implement a networking system ( multiplayer )
