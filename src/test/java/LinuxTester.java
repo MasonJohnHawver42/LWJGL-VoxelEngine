@@ -86,6 +86,17 @@ public class LinuxTester {
         double fps = 1 / 60.0;
 
         user.mouse.setPos(600, 600);
+        
+        int size = 13;
+        int[][] diffs = new int[size * size][3];
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                diffs[i + (j * size)][0] = i - (size / 2);
+                diffs[i + (j * size)][1] = 0;
+                diffs[i + (j * size)][2] = j - (size / 2);
+            }
+        }
 
 
         while ( !user.keyboard.getKey(GLFW_KEY_ESCAPE).released ) {
@@ -130,11 +141,19 @@ public class LinuxTester {
                     cam.trans.move(0, -10 * (float)delta, 0);
                 }
 
-                int xp = (int)cam.trans.position.x / 31;
-                int yp = (int)cam.trans.position.y / 31;
-                int zp = (int)cam.trans.position.z / 31;
+                int xp = ((int)cam.trans.position.x / 31) + ((int)cam.trans.position.x < 0 ? -1 : 0);
+                int yp = ((int)cam.trans.position.y / 31) + ((int)cam.trans.position.y < 0 ? -1 : 0);
+                int zp = ((int)cam.trans.position.z / 31) + ((int)cam.trans.position.z < 0 ? -1 : 0);
 
-                int[][] diffs = { {0, 0, 0} };
+                int[][] positions = new int[diffs.length][3];
+
+                for (int i = 0; i < diffs.length; i++) {
+                    positions[i][0] = diffs[i][0] + xp;
+                    positions[i][1] = diffs[i][1] + yp - 1;
+                    positions[i][2] = diffs[i][2] + zp;
+                }
+
+                world.setChunks(positions);
 
                 //output
 
