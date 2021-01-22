@@ -49,7 +49,43 @@ public class Vorld {
             chunks.remove(degen);
         }
     }
+    
+    public void setChunks(int[][] positions) {
+        LinkedList<Boolean> loaded = new LinkedList<Boolean>();
+        for (int i = 0; i < positions.length; i++) { loaded.add(false); }
 
+        LinkedList<Chunk> copy = new LinkedList<Chunk>(chunks);
+        for (Chunk c : copy) {
+            boolean degen = true;
+
+            int i = 0;
+            for (int[] pos : positions) {
+                int x = pos[0]; int y = pos[1]; int z = pos[2];
+                if (c.x == x && c.y == y && c.z == z) {
+                    degen = false;
+                    loaded.set(i, true);
+                    break;
+                }
+                i++;
+            }
+
+            if (degen) {
+                c.terminate();
+                chunks.remove(c);
+            }
+        }
+
+        int i = 0;
+        for (boolean l : loaded) {
+            if (!l) {
+                int[] pos = positions[i];
+                int x = pos[0]; int y = pos[1]; int z = pos[2];
+                chunks.add(generateChunk(x, y, z));
+            }
+            i++;
+        }
+    }
+    
     public void render(Camera cam) {
 
         sprog.bind();
