@@ -12,7 +12,7 @@ import static org.lwjgl.opengl.GL20.GL_FRAGMENT_SHADER;
 import static org.lwjgl.opengl.GL20.GL_VERTEX_SHADER;
 
 
-public class LinuxTester {
+public class Tester {
 
     //basic io
     private User user;
@@ -170,5 +170,5 @@ public class LinuxTester {
         }
     }
 
-    public static void main(String[] args) { new LinuxTester().run(); }
+    public static void main(String[] args) { new Tester().run(); }
 }
