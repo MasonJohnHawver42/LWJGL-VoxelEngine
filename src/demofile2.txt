@@ -1,0 +1,196 @@
+massachusetts institute of technology
+harvard university
+stanford university
+yale university
+duke university
+princeton university
+rice university
+california institute of technology
+brown university
+university of pennsylvania
+vanderbilt university
+columbia university
+dartmouth college
+northwestern university
+washington university in st louis
+university of notre dame
+university of chicago
+cornell university
+university of southern california
+pomona college
+johns hopkins university
+carnegie mellon university
+university of michigan-ann arbor
+university of california-los angeles
+georgetown university
+bowdoin college
+georgia institute of technology
+harvey mudd college
+university of virginia
+carleton college
+tufts university
+united states military academy at west point
+williams college
+haverford college
+colby college
+washington  and  lee university
+amherst college
+middlebury college
+claremont mckenna college
+emory university
+barnard college
+swarthmore college
+wellesley college
+wake forest university
+colgate university
+university of california-berkeley
+davidson college
+university of north carolina at chapel hill
+boston college
+northeastern university
+new york university
+wesleyan university
+hamilton college
+william  and  mary
+boston university
+university of florida
+university of texas-austin
+case western reserve university
+university of georgia
+virginia tech
+university of wisconsin
+university of richmond
+lehigh university
+villanova university
+macalester college
+tulane university
+vassar college
+grinnell college
+bates college
+university of miami
+smith college
+lafayette college
+kenyon college
+university of rochester
+university of illinois at urbana champaign
+purdue university
+the cooper union for the advancement of science and art
+bucknell university
+colorado school of mines
+texas a and m university
+reed college
+penn state
+santa clara university
+university of california-santa barbara
+scripps college
+southern methodist university
+babson college
+bryn mawr college
+north carolina state university
+brigham young university
+worcester polytechnic institute
+the ohio state university
+university of washington
+florida state university
+mount holyoke college
+university of minnesota twin cities
+rensselaer polytechnic institute
+clemson university
+university of california-irvine
+university of california-davis
+university of maryland-college park
+university of california-san diego
+rose hulman institute of technology
+university of pittsburgh
+st olaf college
+texas christian university
+colorado college
+skidmore college
+occidental college
+whitman college
+michigan state university
+franklin  and  marshall college
+brandeis university
+university of south florida
+stevens institute of technology
+gettysburg college
+indiana university-bloomington
+yeshiva university
+wheaton college-illinois
+university of tulsa
+loyola marymount university
+union college-new york
+furman university
+rhode island school of design
+pepperdine university
+michigan technological university
+university of delaware
+saint louis university
+university of san diego
+auburn university
+university of massachusetts-amherst
+virginia military institute
+baylor university
+james madison university
+denison university
+rhodes college
+california polytechnic state university cal poly-san luis obispo
+university of iowa
+bentley university
+arizona state university
+rutgers university-new brunswick
+syracuse university
+university of utah
+iowa state university
+university of central florida
+sewanee-the university of the south
+university of dayton
+hendrix college
+milwaukee school of engineering
+gustavus adolphus college
+wabash college
+university of oklahoma
+fordham university
+university of connecticut
+new mexico tech
+oklahoma state university
+university of south carolina
+united states merchant marine academy
+university of st thomas-minnesota
+the university of alabama
+kansas state university
+drake university
+mississippi state university
+american university
+chapman university
+oberlin college
+university of cincinnati
+miami university
+augustana university
+university of portland
+university of missouri
+depauw university
+letourneau university
+washington state university
+texas tech university
+hope college
+trinity college-connecticut
+university of arkansas
+lawrence university
+university of arizona
+lewis  and  clark college
+binghamton university suny
+university at buffalo suny
+university of texas at dallas
+dickinson college
+university of nebraska-lincoln
+university of colorado-boulder
+point loma nazarene university
+university of kansas
+california state university-long beach
+creighton university
+union university
+university of denver
+marquette university
+drexel university
+temple university
