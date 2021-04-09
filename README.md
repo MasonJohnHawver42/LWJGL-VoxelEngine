@@ -21,8 +21,8 @@ A communities rendition of Minecraft from scratch in java.
  
  - World Generation
    - [x] create chunks
-   - [ ] load chuncks dynamically
-   - [ ] procedualy generate chunks
+   - [x] load chuncks dynamically
+   - [x] procedualy generate chunks
        - [ ] landscape
        - [ ] biomes
        - [ ] rivers
