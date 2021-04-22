@@ -1,5 +1,5 @@
 # Bullhorned-Minecraft
-A communities rendition of Minecraft from scratch in java.
+My rendition of Minecraft from scratch in java using opengl and latter on an entity componet system.
 
 # Goals:
  - Make Minecraft from scratch in java
