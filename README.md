@@ -1,6 +1,8 @@
 # Bullhorned-Minecraft
 My rendition of Minecraft from scratch in java using opengl and latter on an entity componet system.
 
+![image](https://github.com/MasonJohnHawver42/Bullhorned-Minecraft/AOBM.png)
+
 # Goals:
  - Make Minecraft from scratch in java
 
