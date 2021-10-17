@@ -1,7 +1,8 @@
 # Bullhorned-Minecraft
-My rendition of Minecraft from scratch in java using opengl and latter on an entity componet system.
-
 ![image](https://raw.githubusercontent.com/MasonJohnHawver42/Bullhorned-Minecraft/main/AOBM~2.png)
+
+# Summary
+My rendition of Minecraft from scratch in java using opengl.
 
 # Goals:
  - Make Minecraft from scratch in java
@@ -13,7 +14,9 @@ My rendition of Minecraft from scratch in java using opengl and latter on an ent
    - [x] create multiple voxels
    - [x] textured voxels
    - [x] sprite sheet sys
+   - [x] basic lighting
    - [x] create a camera sys
+   - [ ] dynamic lighting
    - [ ] skybox
    - [ ] particle system
  
