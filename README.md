@@ -37,3 +37,4 @@ My rendition of Minecraft from scratch in java using opengl.
    - ...
   
  - [ ] Implement a networking system ( multiplayer ) <- how dunno?
+ - [ ] Implement multiple threads <- ???
